@@ -1,14 +1,10 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function isPalindrome(str) {
+  // Remove spaces and special characters, and convert to lowercase
+  str = str.replace(/[^a-z]/g, "").toLowerCase();
+
+  // Compare the original string with its reverse
+  return str === str.split("").reverse().join("");
 }
-
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
